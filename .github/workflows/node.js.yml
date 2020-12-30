@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: npm istall and build webpack
-    - run: |
+      run: |
         npm install
         npm run build
   
@@ -32,8 +32,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, and test  
-    - run: |
+      run: |
         npm install
         npm test
-    - env:
+      env:
         CI: true
